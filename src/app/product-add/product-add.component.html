@@ -1,0 +1,54 @@
+<div class=" flex items-center justify-center ">
+        
+    <form enctype="multipart/form-data" id="form" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 w-full">
+        
+        <br>
+        <h1 class="block text-gray-700 font-bold mb-2 text-xl text-center">Add Product</h1>
+        <br>
+        
+        <div class="mb-2">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="name">Name</label>
+            <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                name="name" id="name" type="text" placeholder="Product name" [(ngModel)]="product.name">
+            <p id="infe" class="text-red-500 mt-2 text-xs italic"></p>
+
+        </div>
+        
+        <div class="mb-2">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="name">Price</label>
+            <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                name="price" id="price" type="text" placeholder="Product price" [(ngModel)]="product.price">
+            <p id="infe2" class="text-red-500 mt-2 text-xs italic"></p>
+
+        </div>
+                    
+        <div class="mb-2">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="name">Image</label>
+            <input
+                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                name="img" id="img" type="file" [(ngModel)]="product.image" (change)="onFileSlted($event)">
+            <p id="infe3" class="text-red-500 mt-2 text-xs italic"></p>
+
+        </div>
+
+        <div class="mb-2">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="name">Detail</label>
+            <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="desc" id="desc" type="text" placeholder="Enter product detail..." [(ngModel)]="product.desc"></textarea>
+            <p id="infe5" class="text-red-500 mt-2 text-xs italic"></p>
+        
+        </div>
+
+        <div class="flex items-center gap-3">
+            <button id="submit"
+                class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                type="submit" (click)="onAddProduct()">
+                 Add Product
+            </button>
+            <a class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" routerLink="/product">List</a>
+
+        </div>
+    </form>  
+    
+</div>

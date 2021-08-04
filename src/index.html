@@ -6,8 +6,24 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap");
+
+    * {
+      line-height: 1;
+      font-family: "Inter", sans-serif;
+    }
+
+    .bo {
+      height: 100vh;
+      display: grid;
+      font-family: "Inter", sans-serif;
+      grid-template-columns: 280px 1fr;
+    }
+  </style>
 </head>
-<body>
+<body class="antialiased">
   <app-root></app-root>
 </body>
 </html>
